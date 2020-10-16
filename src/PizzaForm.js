@@ -21,12 +21,12 @@ export default function PizzaForm(props) {
             <div className="pizza-size-section">
                 <p className="form-title-section">Select a size<br /><span>Required</span></p>
                 <label className="sizes">
-                    <select type="select" name="pizza-size">
+                    <select type="select" name="size" onChange={handleChange}>
                         <option value="">--Please select a size--</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                        <option value="rediculous">Simma down na!</option>
+                        <option value="small" onChange={handleChange}>Small</option>
+                        <option value="medium" onChange={handleChange}>Medium</option>
+                        <option value="large" onChange={handleChange}>Large</option>
+                        <option value="rediculous" onChange={handleChange}>Simma down na!</option>
                     </select>
                 </label>
                 <br />
