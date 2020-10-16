@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './App.css'
 
 const App = () => {
@@ -8,18 +8,22 @@ const App = () => {
     <header>
       <h1>Lambda Eats</h1>
       <nav>
-        <a href="#" className="myButton">
+        <Link to='/' className="myButton">
         Home
-        </a>
-        <a href="#" className="myButton">
-        Help
-        </a>
+        </Link>
+        <Link to="/about" className="myButton">
+        About
+        </Link>
       </nav>
     </header>
     <section>
       <div className="hero-section">
       <p id="hero-text">Your favorite food, delivered while coding...</p>
-      <p className="pizza-button">Pizza?</p>
+
+      <Link to ='pizza'>
+        <p className="pizza-button">Pizza?</p>
+      </Link>
+      
       </div>
     </section>
       
