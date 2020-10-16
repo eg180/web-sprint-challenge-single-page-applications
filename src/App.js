@@ -1,10 +1,22 @@
 import React from "react";
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import './App.css'
 
 const App = () => {
   return (
     <>
+    <header>
       <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
+      <nav>
+        <a href="#" class="myButton">
+        Home
+        </a>
+        <a href="#" class="myButton">
+        Help
+        </a>
+      </nav>
+    </header>
+      
     </>
   );
 };
