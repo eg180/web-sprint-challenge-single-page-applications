@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Link } from 'react-router-dom';
+import PizzaForm from './PizzaForm';
 import './App.css'
 
 const App = () => {
@@ -26,6 +27,9 @@ const App = () => {
       
       </div>
     </section>
+
+
+    <Route path='/pizza' component={PizzaForm} />
       
     </>
   );
