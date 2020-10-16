@@ -21,6 +21,11 @@ body {
 
 }
 
+.form-title-section {
+  background-color: rgb(224, 178, 178);
+  max-width: 35vh;
+}
+
 #hero-text {
   font-family: 'Permanent Marker', cursive;
 
