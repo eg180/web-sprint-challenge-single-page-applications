@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function PizzaForm(props) {
 
-    const {change} = props;
+    const {change, errors} = props;
 
     const handleChange = (evt) => {
         const {name, value, type, checked} = evt.target;
@@ -19,6 +19,9 @@ export default function PizzaForm(props) {
 
             <form>
             <div className="pizza-size-section">
+                <div className="errors">
+                    <div>{errors.size}</div>
+                </div>
                 <p className="form-title-section">Select a size<br /><span>Required</span></p>
                 <label className="sizes">
                     <select type="select" name="size" onChange={handleChange}>
@@ -104,6 +107,9 @@ export default function PizzaForm(props) {
 
                 <div className="special-instructions">
                     <p className="form-title-section">Special Instructions</p>
+                    <div className="errors">
+                    <div>{errors.specialinstructions}</div>
+                </div>
                     <input name="specialinstructions" onChange={handleChange}
                     placeholder="Special Delivery Instructions" />
                 </div>

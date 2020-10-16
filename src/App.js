@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import * as yup from 'yup';
 import schema from './validation/schema'
 import { Route, Link } from 'react-router-dom';
@@ -7,15 +7,23 @@ import './App.css'
 
 const App = () => {
 
+
+  const [errors, setErrors] = useState({size: '', specialinstructions: '', sauce: '', toppings: ''});
+
+
   const handleChange = (name, value) => {
     yup
     .reach(schema, name)
     .validate(value)
     .then(() => {
-      console.log('nothing wrong here')
+      setErrors({
+        ...errors, [name]: "",
+      })
     })
     .catch(err => {
-      console.log(err)
+      console.log(err.errors);
+      console.log(`The following errors were found in ${name}: ${err.errors}`)
+      setErrors({...errors, [name]: err.errors[0]})
     })
   }
 
@@ -44,7 +52,7 @@ const App = () => {
     </section>
 
 
-    <Route path='/pizza' render={() => <PizzaForm change={handleChange}/> } />
+    <Route path='/pizza' render={() => <PizzaForm errors={errors} change={handleChange}/> } />
       
     </>
   );
