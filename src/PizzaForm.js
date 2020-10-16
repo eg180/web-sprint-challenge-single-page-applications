@@ -35,20 +35,20 @@ export default function PizzaForm(props) {
             <div className="sauces-section">
                 <p className="form-title-section">Choice of Sauce<br /><span>Required</span></p>
                 <label>
-                    <input type="radio" name="sauce" value="red" 
+                    <input type="radio" name="sauce" onChange={handleChange} value="red" 
                     />Red
                 </label><br />
 
                 <label className="sauces">
-                    <input type="radio" name="sauce" value="garlicranch" 
+                    <input type="radio" name="sauce" onChange={handleChange} value="garlicranch" 
                     />Garlic Ranch
                 </label><br />
                 <label>
-                    <input type="radio" name="sauce" value="bbq" 
+                    <input type="radio" name="sauce" onChange={handleChange} value="bbq" 
                     />BBQ
                 </label><br />
                 <label>
-                    <input type="radio" name="sauce" value="spinachalfredo" 
+                    <input type="radio" name="sauce" onChange={handleChange} value="spinachalfredo" 
                     />Spinach Alfredo
                 </label>
 
@@ -56,49 +56,49 @@ export default function PizzaForm(props) {
                 <p className="form-title-section">Add Toppings<br /><span>Choose up to 10</span></p>
                 <div className="toppings-left">
                     <label>
-                            <input type="checkbox" name="toppings" value="pepperoni" />Pepperoni
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="pepperoni" />Pepperoni
                         </label>
                         <label>
-                            <input type="checkbox" name="toppings" value="dicedtomatoes" />Diced Tomato
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="dicedtomatoes" />Diced Tomato
                         </label><br />
                         <label>
-                            <input type="checkbox" name="toppings" value="sausage" />Sausage
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="sausage" />Sausage
                         </label>
                         <label>
-                            <input type="checkbox" name="toppings" value="blackolives" />Black Olives
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="blackolives" />Black Olives
                         </label><br />
                         <label>
-                            <input type="checkbox" name="toppings" value="canadianbacon" />Canadian Bacon
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="canadianbacon" />Canadian Bacon
                         </label>
                         <label>
-                            <input type="checkbox" name="toppings" value="roastedgarlic" />Roasted Garlic
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="roastedgarlic" />Roasted Garlic
                         </label><br />
                         <label>
-                            <input type="checkbox" name="toppings" value="spicyitaliansausage" />Spicy Italilan Sausage
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="spicyitaliansausage" />Spicy Italilan Sausage
                         </label>
                 </div>
 
                 <div className="toppings-right">
                     <label>
-                            <input type="checkbox" name="toppings" value="artichokehearts" />Artichole Hearts
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="artichokehearts" />Artichole Hearts
                         </label><br />
                         <label>
-                            <input type="checkbox" name="toppings" value="grilledchicken" />Grilled Chicken
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="grilledchicken" />Grilled Chicken
                         </label>
                         <label>
-                            <input type="checkbox" name="toppings" value="threecheese" />Three Cheese
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="threecheese" />Three Cheese
                         </label><br />
                         <label>
-                            <input type="checkbox" name="toppings" value="onions" />Onions
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="onions" />Onions
                         </label>
                         <label>
-                            <input type="checkbox" name="toppings" value="pineapple" />Pineapple
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="pineapple" />Pineapple
                         </label><br />
                         <label>
-                            <input type="checkbox" name="toppings" value="greenpepper" />Green Pepper
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="greenpepper" />Green Pepper
                         </label>
                         <label>
-                            <input type="checkbox" name="toppings" value="Extra Cheese" />Extra Cheese
+                            <input type="checkbox" name="toppings" onChange={handleChange} value="Extra Cheese" />Extra Cheese
                         </label><br />
                 </div>
 
