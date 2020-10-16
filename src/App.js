@@ -18,6 +18,8 @@ const App = () => {
     </header>
     <section>
       <div className="hero-section">
+      <p id="hero-text">Your favorite food, delivered while coding...</p>
+      <p className="pizza-button">Pizza?</p>
       </div>
     </section>
       

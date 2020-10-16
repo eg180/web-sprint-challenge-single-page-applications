@@ -1,9 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Leckerli+One&family=Permanent+Marker&display=swap');
+
 .App {
   text-align: center;
 }
 
 body {
   margin: 1.25rem;
+}
+
+.hero-section {
+  background-image: url("./Assets/Pizza.jpg");
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2rem;
+  font-family: 'Leckerli One', cursive;
+
+}
+
+#hero-text {
+  font-family: 'Permanent Marker', cursive;
+
 }
 
 .myButton {
@@ -20,10 +39,35 @@ body {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
 }
+
 .myButton:hover {
 	background-color:#eb675e;
 }
 .myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.pizza-button {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.pizza-button:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.pizza-button:active {
 	position:relative;
 	top:1px;
 }
@@ -42,6 +86,8 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  font-family: 'Krona One', sans-serif;
+
 }
 
 nav {
