@@ -1,7 +1,15 @@
 import React from 'react';
 
 
-export default function PizzaForm() {
+export default function PizzaForm(props) {
+
+    const {change} = props;
+
+    const handleChange = (evt) => {
+        const {name, value, type, checked} = evt.target;
+        const valueToUse = type === "checkbox" ? checked : value;
+        change(name, valueToUse);
+    }
 
 
     return (
@@ -96,7 +104,8 @@ export default function PizzaForm() {
 
                 <div className="special-instructions">
                     <p className="form-title-section">Special Instructions</p>
-                    <input name="specialinstructions" placeholder="Special Delivery Instructions" />
+                    <input name="specialinstructions" onChange={handleChange}
+                    placeholder="Special Delivery Instructions" />
                 </div>
 
                 <div className="quantity-section">

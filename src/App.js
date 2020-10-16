@@ -1,9 +1,24 @@
 import React from "react";
+import * as yup from 'yup';
+import schema from './validation/schema'
 import { Route, Link } from 'react-router-dom';
 import PizzaForm from './PizzaForm';
 import './App.css'
 
 const App = () => {
+
+  const handleChange = (name, value) => {
+    yup
+    .reach(schema, name)
+    .validate(value)
+    .then(() => {
+      console.log('nothing wrong here')
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
+
   return (
     <>
     <header>
@@ -29,7 +44,7 @@ const App = () => {
     </section>
 
 
-    <Route path='/pizza' component={PizzaForm} />
+    <Route path='/pizza' render={() => <PizzaForm change={handleChange}/> } />
       
     </>
   );
