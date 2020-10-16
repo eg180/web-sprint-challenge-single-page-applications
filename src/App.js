@@ -8,14 +8,18 @@ const App = () => {
     <header>
       <h1>Lambda Eats</h1>
       <nav>
-        <a href="#" class="myButton">
+        <a href="#" className="myButton">
         Home
         </a>
-        <a href="#" class="myButton">
+        <a href="#" className="myButton">
         Help
         </a>
       </nav>
     </header>
+    <section>
+      <div className="hero-section">
+      </div>
+    </section>
       
     </>
   );
